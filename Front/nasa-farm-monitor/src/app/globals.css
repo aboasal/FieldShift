@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+:root {
+  --background: #070b0e;
+  --foreground: #f2f7f4;
+  --nova-surface: #0d1318;
+  --nova-card: #121a21;
+  --nova-border: rgba(255, 255, 255, 0.09);
+  --nova-sage: #a3e4b7;
+  --nova-emerald: #34d399;
+  --nova-muted: #8a9b93;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+/* Leaflet polish in NOVA dark glass style */
+.leaflet-container {
+  font-family: inherit;
+  background: #070b0e;
+}
+.leaflet-bar {
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 12px !important;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45) !important;
+}
+.leaflet-bar a {
+  background-color: rgba(15, 22, 28, 0.88) !important;
+  color: #f2f7f4 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(12px);
+}
+.leaflet-bar a:hover {
+  background-color: rgba(30, 42, 52, 0.95) !important;
+  color: #a3e4b7 !important;
+}
+.leaflet-tooltip {
+  background: rgba(13, 19, 24, 0.92) !important;
+  color: #f2f7f4 !important;
+  border: 1px solid rgba(163, 228, 183, 0.3) !important;
+  border-radius: 10px !important;
+  padding: 6px 10px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5) !important;
+}
+.leaflet-control-attribution {
+  background: rgba(7, 11, 14, 0.75) !important;
+  color: #8a9b93 !important;
+  backdrop-filter: blur(8px);
+}
+.leaflet-control-attribution a {
+  color: #a3e4b7 !important;
+}
+
+/* Slim dark scrollbars for the sidebar */
+.scroll-slim::-webkit-scrollbar {
+  width: 6px;
+}
+.scroll-slim::-webkit-scrollbar-track {
+  background: #0a0f13;
+}
+.scroll-slim::-webkit-scrollbar-thumb {
+  background: #23303a;
+  border-radius: 9999px;
+}
